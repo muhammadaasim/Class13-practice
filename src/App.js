@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import './App.css'
 import useWebAnimations from "@wellyshen/use-web-animations";
 
 function App() {
-  const [Count, Setcount] = useState(1);
   // const element = useRef(null);
   const { ref, playState, getAnimation } = useWebAnimations({
     keyframes: [
@@ -17,15 +16,16 @@ function App() {
       direction: "alternate", // Run the animation forwards and then backwards
       easing: "ease-in-out", // Use a fancy timing function
     },
-    onReady: ({ playState, animate, animation }) => {
-      Setcount(Count++);
-    },
-    onUpdate: ({ playState, animate, animation }) => {
-      // Triggered when the animation enters the running state or changes state
-    },
-    onFinish: ({ playState, animate, animation }) => {
-      // Triggered when the animation enters the finished state (Google Chrome: available in v84+)
-    },
+    // onReady: ({ playState, animate, animation }) => {
+    //   // Triggered when the animation is ready to play (Google Chrome: available in v84+)
+    // },
+    // onUpdate: ({ playState, animate, animation }) => {
+    //   // Triggered when the animation enters the running state or changes state
+    // },
+    // onFinish: ({ playState, animate, animation }) => {
+    //   // Triggered when the animation enters the finished state (Google Chrome: available in v84+)
+    // },
+    // More useful options...
   });
 
   return (
