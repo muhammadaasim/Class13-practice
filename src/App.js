@@ -1,10 +1,10 @@
 import React from "react";
 import './App.css'
-import useWebAnimations, { bounce, fadeIn, backOutUp, bounceInLeft } from "@wellyshen/use-web-animations";
+import useWebAnimations, { bounce, fadeIn, backOutUp, bounceInLeft, bounceInRight } from "@wellyshen/use-web-animations";
 
 function App() {
   // const element = useRef(null);
-  const { ref, playState, getAnimation } = useWebAnimations({ ...bounceInLeft });
+  const { ref, playState, getAnimation } = useWebAnimations({ ...bounceInRight });
   // const { ref, playState, getAnimation } = useWebAnimations({
   //   keyframes: [
   //     { transform: "translate(0,0)" },
